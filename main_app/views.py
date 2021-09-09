@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.urls import reverse
 from django.views.generic.edit import CreateView
-from django.views.generic.detail import Detailview
+from django.views.generic.detail import DetailView
 from .models import Video
 
 # Create your views here.
@@ -17,6 +17,6 @@ class CreateVideo(CreateView):
     def get_success_url(self):
         return reverse('video-detail', kwargs={'pk': self.object.pk})
 
-class DetailVideo(Detailview):
+class DetailVideo(DetailView):
     model = Video
-    template_name = "videos/videodetail.html"
+    template_name = "videos/detailvideo.html"
