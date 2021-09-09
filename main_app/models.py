@@ -10,3 +10,5 @@ class Video(models.Model):
     videoFile = models.FileField(upload_to='uploads/video_files', validators=[FileExtensionValidator(allowed_extensions=['mp4'])])
     thumbnail = models.FileField(default="uploads/thumbnails/thumbnail-default.jpg", upload_to='uploads/thumbnails', validators=[FileExtensionValidator(allowed_extensions=['png', 'jpg', 'jpeg'])])
     date_posted = models.DateTimeField(default=timezone.now)
+     
+

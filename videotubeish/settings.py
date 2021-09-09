@@ -45,7 +45,6 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'main_app',
-    'profiles',
     'crispy_forms',
     'django.contrib.sites',
     'allauth',
@@ -155,4 +154,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Sign In Redirect
 LOGIN_REDIRECT_URL = 'index'
  
-# AWS_STORAGE_BUCKET_NAME = "tubeish"
+AWS_STORAGE_BUCKET_NAME = "tubeish"

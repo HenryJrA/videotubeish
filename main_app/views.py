@@ -2,6 +2,7 @@ from django.urls import reverse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from .models import Video
+
 from django.views.generic.list import ListView
 
 class Index(ListView):
