@@ -23,6 +23,8 @@
 						<ion-icon class="video-icons" name="share-social-outline" type="button"  data-toggle="modal" data-target="#exampleModal">
                         Share
                     </ion-icon>
+                    <a class="video-icons icon-color" href="{% url 'video-update' object.pk %}"><ion-icon name="pencil-outline"></ion-icon></a>
+	                  <a class="video-icons icon-color" href="{% url 'video-delete' object.pk %}"><ion-icon name="close-outline"></ion-icon></a>
                     
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
