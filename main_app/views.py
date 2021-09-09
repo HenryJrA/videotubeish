@@ -36,9 +36,6 @@ class UpdateVideo (UpdateView):
   def get_success_url(self):
       return reverse('video-detail', kwargs={'pk': self.object.pk})
 
-  # def test_func(self):
-		  # video = self.get_object()
-		  # return self.request.user == video.uploader    
 
 class DeleteVideo( DeleteView):
 	model = Video
@@ -47,6 +44,3 @@ class DeleteVideo( DeleteView):
 	def get_success_url(self):
 		return reverse('index')
 	
-	# def test_func(self):
-	# 	video = self.get_object()
-	# 	return self.request.user == video.uploader
