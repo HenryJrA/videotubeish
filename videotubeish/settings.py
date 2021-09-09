@@ -9,9 +9,11 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
 from pathlib import Path
 import os
+import environ
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +45,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'main_app',
+    'profiles',
     'crispy_forms',
     'django.contrib.sites',
     'allauth',
@@ -143,6 +146,7 @@ MEDIA_URL='/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # Email
@@ -150,3 +154,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Sign In Redirect
 LOGIN_REDIRECT_URL = 'index'
+ 
+# AWS_STORAGE_BUCKET_NAME = "tubeish"
