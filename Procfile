@@ -1,1 +1,1 @@
-web: gunicorn tubeish.wsgi
+web: gunicorn videotubeish.wsgi
