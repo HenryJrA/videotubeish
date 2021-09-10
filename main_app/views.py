@@ -5,7 +5,6 @@ from .models import Video
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.list import ListView
 from django.contrib.auth.views import LoginView
-
 class Index(ListView):
   model = Video
   template_name = 'videos/index.html'

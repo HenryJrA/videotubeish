@@ -21,6 +21,8 @@ Click [here](https://tubeish.herokuapp.com/).
 - HTML.
 - CSS.
 - BootStrap.
+- PostgreSQL.
+- VideoJs
 
 ## Minimum Viable Product:
 - AAU, i want to be able to signup, login, and sign out.
