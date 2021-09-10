@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
 import os
-# import django_heroku
-# django_heroku.settings(locals())
 
 
 
@@ -155,5 +153,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Sign In Redirect
 LOGIN_REDIRECT_URL = 'index'
  
-AWS_STORAGE_BUCKET_NAME = "tubeish"
 
+
+
+import django_heroku
+django_heroku.settings(locals())
