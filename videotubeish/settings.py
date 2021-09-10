@@ -45,6 +45,7 @@ SITE_ID = 1
 INSTALLED_APPS = [
     'main_app',
     'crispy_forms',
+    'bootstrap4',
     'django.contrib.sites',
     'allauth',
     'allauth.account',

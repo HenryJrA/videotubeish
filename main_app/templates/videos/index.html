@@ -4,12 +4,12 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			{% for object in object_list %}
-			<div class="card col-md-4 col-sm-12 mr-md-2 mt-5 p-4 ">
-				<a href="{% url 'video-detail' object.pk %}"><img src="/media/{{ object.thumbnail }}" width="256" height="144"></a>
+			<div class="card  shadow-lg col-md-4 col-sm-10 mr-md-4 mt-5 p-4 ">
+				<a href="{% url 'video-detail' object.pk %}"><img src="/media/{{ object.thumbnail }}" class = 'text-center'width="300" height="150"></a>
 				<div class="card-body">
-					<a class="link-text" href="{% url 'video-detail' object.pk %}"><h5 class="text-center">{{ object.title }}</h5></a>
-					<p class="text-muted text-center m-0">{{ object.uploader }}</p>
-					<p class="text-muted text-center">{{ object.date_posted | date:"M d, Y" }}</p>
+					<a class="link-text" href="{% url 'video-detail' object.pk %}"><h5 class="text-left">{{ object.title }}</h5></a>
+					<p class="text-muted text-left m-0">{{ object.uploader }}</p>
+					<p class="text-muted text-left">{{ object.date_posted | date:"M d, Y" }}</p>
 				</div>
 			</div>
 			{% endfor %}
