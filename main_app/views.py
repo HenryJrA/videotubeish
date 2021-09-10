@@ -39,5 +39,3 @@ class DeleteVideo( DeleteView):
 	def get_success_url(self):
 		return reverse('index')
 	
-S3_BASE_URL = 'https://s3.us-east-1.amazonaws.com/'
-BUCKET = 'tubeish'
