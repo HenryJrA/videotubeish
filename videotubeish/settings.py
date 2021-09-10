@@ -11,9 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
 import os
-import environ
-env = environ.Env()
-environ.Env.read_env()
+import django_heroku
+django_heroku.settings(locals())
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +38,7 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
+DEBUG_PROPAGATE_EXCEPTIONS = True
 SITE_ID = 1
 
 
@@ -155,3 +156,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGIN_REDIRECT_URL = 'index'
  
 AWS_STORAGE_BUCKET_NAME = "tubeish"
+
